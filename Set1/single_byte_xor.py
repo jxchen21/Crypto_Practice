@@ -21,7 +21,7 @@ def break_single_byte_xor(in_hex):
         if (score_english(out) > high):
             best_result = {
                 "key": chr(i),
-                "plaintext": out.decode(),
+                "plaintext": out.decode(errors="replace"),
                 "score": score
             }
             high = score
